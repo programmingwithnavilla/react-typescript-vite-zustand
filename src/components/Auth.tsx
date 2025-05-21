@@ -9,15 +9,15 @@ const Auth = () => {
     <div>
       {user ? (
         <>
-          <p>Welcome, {user.name}</p>
+          <p>Welcome, {user}!</p>
           <button onClick={logout}>Logout</button>
         </>
       ) : (
         <>
           <input
-            placeholder="Enter name"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            placeholder="Enter name"
           />
           <button onClick={() => login(name)}>Login</button>
         </>
